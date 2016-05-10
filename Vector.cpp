@@ -6,7 +6,7 @@
 //  Copyright © 2016 Ivan Krpelnik. All rights reserved.
 //
 
-#include "Vector.hpp"
+#include "Vector.h"
 
 namespace LinearnaAlgebra {
 

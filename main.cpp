@@ -7,7 +7,7 @@
 //
 
 #include <iostream>
-#include "Vector.hpp"
+#include "Vector.h"
 #include "Matrix.h"
 
 using namespace LinearnaAlgebra;
@@ -16,28 +16,28 @@ void prvi() {
     std::cout << "Prvi: " << "\n";
     Vector<> v1 = Vector<>(2, 3, -4) + Vector<>(-1, 4, -1);
     std::cout << v1 << "\n";
-    
+
     int s = v1 * Vector<> (-1, 4, -1);
     std::cout << s << "\n";
-    
+
     Vector<> v2 = v1 % Vector<>(2, 2, 4);
     std::cout << v2 << "\n";
-    
+
     Vector<> v3 = nNormalize(v2);
     std::cout << v3 << "\n";
-    
+
     Vector<> v4 = nFlip(v2);
     std::cout << v4 << "\n";
-    
+
     int a1[9] = {1, 2, 3, 2, 1, 3, 4, 5, 1}, a2[9] = {-1, 2, -3, 5, -2, 7, -4, -1, 3};
     double b1[9] = {1, 2, 3, 2, 1, 3, 4, 5, 1}, b2[9] = {-1, 2, -3, 5, -2, 7, -4, -1, 3};
-    
+
     Matrix<int> m1 = Matrix<int>(3, 3, a1) + Matrix<int>(3, 3, a2);
     std::cout << m1;
-    
+
     Matrix<int> m2 = Matrix<int>(3, 3, a1) * !Matrix<int>(3, 3, a2);
     std::cout << m2;
-    
+
     Matrix<double> m3 = Matrix<double>(3, 3, b1) * ~Matrix<double>(3, 3, b2);
     std::cout << m3;
 }
